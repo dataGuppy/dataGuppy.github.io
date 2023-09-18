@@ -7,12 +7,12 @@
 </head>
 
 <body style="background-image:url('light1.jpg'); background-color:#e3e2e9; background-position:center;">
+	<?php
+		$log_file_name = 'mylog.log'; // Change to the log file name
+		$message = $_POST['message']; // incoming message
+		file_put_contents($log_file_name, $message, FILE_APPEND);
+		header('Location: /'); // redirect back to the main site
 	<header style="text-align:center;">
-		<?php
-			$log_file_name = 'mylog.log'; // Change to the log file name
-			$message = $_POST['message']; // incoming message
-			file_put_contents($log_file_name, $message, FILE_APPEND);
-			header('Location: /'); // redirect back to the main site
 		<h1>Quotes of the day</h1>
 	</header>
 
