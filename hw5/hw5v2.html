@@ -62,24 +62,18 @@
 		<p>Background image by <a href="https://www.pexels.com/@gabriela-palai-129458/" target="_blank" rel="noopener noreferrer">Gabriela Palai</a></p>
 		<p>Included and modified a <a href="http://javascriptkit.com/script/cut164.shtml" target="_blank" rel="noopener noreferrer">script</a> that displays the current date</p>
 		<p>
-			Leave me your comment below
-			<form action="save-to-log.php" method="POST">
-				<fieldset>
-					<legend>Add to log</legend>
-					<p>
-						Message:
-						<textarea name="message"></textarea>
-					</p>
-					<p>
-						<input type="submit" value="SAVE" />
-					</p>
-				</fieldset>
-			</form>
-			<form method="get" action="download">
-				
+			Leave me your info below
+			<!-- I tried to write a php script here to save user input on the server but got an
+			error due to gitHub not supporting php. So just left action as it was in the textbook-->
+			<form method="get" action="https://www.google.com">
+				<label for="fullname">Full Name</label>
+				<input type="text" name="fullname" id="fullname">
+				<label for="age">&emsp;Age</label>
+				<input type="number" name="age" id="age">
+				<label for="webmail">&emsp;Email</label>
+				<input type="email" name="webmail" id="webmail"><br><br>
 				<label for="comments">Questions or Comments</label><br>
 				<textarea name="comments" id="comments" rows="3" cols="60" placeholder="Comment here" style="resize: none;"></textarea>
-				<button type="button" onclick="download()">Save</button>
 				<input type="submit" value="Submit Information">&nbsp;&nbsp;&nbsp;<input type="reset" value="Clear Form">
 			</form>
 		</p>
