@@ -8,6 +8,11 @@
 
 <body style="background-image:url('light1.jpg'); background-color:#e3e2e9; background-position:center;">
 	<header style="text-align:center;">
+		<?php
+			$log_file_name = 'mylog.log'; // Change to the log file name
+			$message = $_POST['message']; // incoming message
+			file_put_contents($log_file_name, $message, FILE_APPEND);
+			header('Location: /'); // redirect back to the main site
 		<h1>Quotes of the day</h1>
 	</header>
 
@@ -63,21 +68,18 @@
 		<p>Included and modified a <a href="http://javascriptkit.com/script/cut164.shtml" target="_blank" rel="noopener noreferrer">script</a> that displays the current date</p>
 		<p>
 			Leave me your comment below
-			<script>
-					function download(){
-					var text = document.getElementById("comments").value;
-					text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
-					var blob = new Blob([text], { type: "text/plain"});
-					var anchor = document.createElement("a");
-					anchor.download = "my-filename.txt";
-					anchor.href = window.URL.createObjectURL(blob);
-					anchor.target ="_blank";
-					anchor.style.display = "none"; // just to be safe!
-					document.body.appendChild(anchor);
-					anchor.click();
-					document.body.removeChild(anchor);
-					}
-			</script>
+			form action="save-to-log.php" method="POST">
+				<fieldset>
+					<legend>Add to log</legend>
+					<p>
+						Message:
+						<textarea name="message"></textarea>
+					</p>
+					<p>
+						<input type="submit" value="SAVE" />
+					</p>
+				</fieldset>
+			</form>
 			<form method="get" action="download">
 				
 				<label for="comments">Questions or Comments</label><br>
