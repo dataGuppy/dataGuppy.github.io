@@ -6,7 +6,7 @@
 	<meta name="description" content="This page will &#40;hopefully&#41; display a couple of historic quotes per day which are in one way or another connected to today&apos;s date.">
 </head>
 
-<body style="background-image:url('light1.jpg'); background-color:#e3e2e9; background-position:center;">
+<body style="background-image:url('light.jpg'); background-color:#e3e2e9; background-position:center;">
 	<header style="text-align:center;">
 		<h1>Quotes of the day</h1>
 	</header>
@@ -14,11 +14,6 @@
 	<section>
 		<h2 style="text-align:right; font-style:italic;">
 			<script>
-
-			/*Current date script credit: 
-			JavaScript Kit (www.javascriptkit.com)
-			Over 200+ free scripts here!
-			*/
 
 			var mydate=new Date()
 			var year=mydate.getYear()
@@ -51,6 +46,7 @@
 		<br>
 		<br>
 		<br>
+		<br>
 		<hr>
 		<article>
 			<h3>Quote II</h3>
@@ -65,7 +61,20 @@
 		<p>&lowast;Source&colon; <a href="https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel" target="_blank" rel="noopener noreferrer">Wikipedia</a></p>
 		<p>&lowast;&lowast;Source&colon; <a href="https://en.wikipedia.org/wiki/Kenji_Miyazawa" target="_blank" rel="noopener noreferrer">Wikipedia</a></p>
 		<p>Background image by <a href="https://www.pexels.com/@gabriela-palai-129458/" target="_blank" rel="noopener noreferrer">Gabriela Palai</a></p>
-		<p>paragraph 4</p>
-		<p>paragraph 5</p>
+		<p>Included and modified a <a href="http://javascriptkit.com/script/cut164.shtml" target="_blank" rel="noopener noreferrer">script</a> that displays the current date</p>
+		<p>Leave me a comment below</p>
+		<!-- I tried to write a php script here to save user input on the server but got an
+		error due to gitHub not supporting php. So just left action as it was in the textbook-->
+		<form method="get" action="https://www.google.com">
+			<label for="fullname">Full Name</label>
+			<input type="text" name="fullname" id="fullname">
+			<label for="age">&emsp;Age</label>
+			<input type="number" name="age" id="age">
+			<label for="webmail">&emsp;Email</label>
+			<input type="email" name="webmail" id="webmail"><br><br>
+			<label for="comments">Questions or Comments</label><br>
+			<textarea name="comments" id="comments" rows="3" cols="60" placeholder="Comment here" style="resize: none;"></textarea>
+			<input type="submit" value="Submit Information">&nbsp;&nbsp;&nbsp;<input type="reset" value="Clear Form">
+		</form>
 	</footer>
 </body>
