@@ -12,7 +12,29 @@
 	</header>
 
 	<section>
-		<h2 style="text-align:right; font-style:italic;">Today is September 17th</h2>
+		<h2 style="text-align:right; font-style:italic;">
+			<script>
+
+			/*Current date script credit: 
+			JavaScript Kit (www.javascriptkit.com)
+			Over 200+ free scripts here!
+			*/
+
+			var mydate=new Date()
+			var year=mydate.getYear()
+			if (year < 1000)
+				year+=1900
+			var day=mydate.getDay()
+			var month=mydate.getMonth()
+			var daym=mydate.getDate()
+			if (daym<10)
+				daym="0"+daym
+			var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+			var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+			document.write(""+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"")
+
+			</script>
+		</h2>
 		<article>
 			<h3>Quote I</h3>
 			<p>&laquo;<span style="font-size: 2em;">H</span>istory is not the soil in which happiness grows. The periods of happiness in it are the blank pages of history.&raquo;<br>
